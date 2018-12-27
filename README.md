@@ -19,7 +19,7 @@ Latz,Lawns
 ##### Usage
 `git clone https://github.com/lucasprograms/reverse-geocode-csv.git&&cd reverse-geocode-csv`  
 `npm install`  
-`npm run convert` 
+`npm run convert -- <args>` 
 
 ###### Options
 | flag | content | default |

@@ -11,12 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "chalk": "2.4.1",
-    "csv-parse": "4.2.0",
-    "csv-stringify": "5.1.2",
-    "dotenv": "6.2.0",
-    "lodash.every": "4.6.0",
     "minimist": "1.2.0",
-    "node-geocoder": "3.22.0",
+    "reverse-geocode-csv": "1.0.1",
     "untildify": "3.0.3"
   }
 }
