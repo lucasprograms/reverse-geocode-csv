@@ -34,7 +34,19 @@ Latz,Lawns
 
 `npm run convert --inputPath=~/Downloads/gwiLatLon.csv --outputPath=~/Documents/addresses/gwiAddresses.csv streetName streetNumber`
 
-
+Valid column names are:  
+  * formattedAddress
+  * latitude
+  * longitude
+  * county
+  * state
+  * streetNumber
+  * streetName
+  * city
+  * country
+  * countryCode
+  * zipcode
+  * provider
 
 ##### Output
 
