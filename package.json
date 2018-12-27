@@ -1,0 +1,22 @@
+{
+  "name": "geocoder",
+  "version": "0.0.1",
+  "description": "csv lat long => csv address",
+  "main": "index.js",
+  "scripts": {
+    "convert": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas McCain",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "2.4.1",
+    "csv-parse": "4.2.0",
+    "csv-stringify": "5.1.2",
+    "dotenv": "6.2.0",
+    "lodash.every": "4.6.0",
+    "minimist": "1.2.0",
+    "node-geocoder": "3.22.0",
+    "untildify": "3.0.3"
+  }
+}
