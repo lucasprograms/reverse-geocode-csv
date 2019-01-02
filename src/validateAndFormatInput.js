@@ -46,7 +46,9 @@ function validateAndFormatInput(input) {
 
   inputPath = isTildified(inputPath)
     ? untildify(inputPath)
-    : path.resolve(__dirname, inputPath);
+    : inputPath
+
+    
 
   return { columnNames, inputPath, outputPath, latIdx, lonIdx };
 }

@@ -12,7 +12,10 @@
   "dependencies": {
     "chalk": "2.4.1",
     "minimist": "1.2.0",
-    "reverse-geocode-csv": "1.0.1",
+    "reverse-geocode-csv": "1.1.1",
     "untildify": "3.0.3"
+  },
+  "devDependencies": {
+    "csv-stringify": "^5.1.2"
   }
 }

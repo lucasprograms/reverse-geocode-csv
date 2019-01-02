@@ -22,8 +22,12 @@ if (error) {
   }
 } else {
   fs.readFile(inputPath, { encoding: 'utf-8' }, (__, inputCsv) => {
+    console.log(inputCsv)
     reverseGeocodeCsv(inputCsv, { columnNames, latIdx, lonIdx }).then(outputCsv => {
       writeFile(outputCsv)
+    }).catch(err => {
+      console.log(chalk.red.bold('Error :/'))
+      console.log(chalk.red(err))
     })
   });
 }
