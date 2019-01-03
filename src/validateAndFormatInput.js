@@ -42,14 +42,8 @@ function validateAndFormatInput(input) {
   outputPath = outputPath || './output.csv';
   columnNames = columnNames.length ? columnNames : validColumnNames;
 
-  const isTildified = path => path[0] === '~';
-
-  inputPath = isTildified(inputPath)
-    ? untildify(inputPath)
-    : inputPath
-
-    
-
+  inputPath = untildify(inputPath)
+  
   return { columnNames, inputPath, outputPath, latIdx, lonIdx };
 }
 
