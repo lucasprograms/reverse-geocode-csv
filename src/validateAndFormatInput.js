@@ -1,5 +1,6 @@
-const path = require('path');
 const untildify = require('untildify');
+const isValidPath = require('is-valid-path');
+const path = require('path');
 
 function validateAndFormatInput(input) {
   const validColumnNames = [
@@ -39,8 +40,25 @@ function validateAndFormatInput(input) {
 
   latIdx = latIdx || 0;
   lonIdx = !lonIdx && lonIdx !== 0 ? 1 : lonIdx;
+
+  if (latIdx === lonIdx) {
+    return {
+      error: {
+        title: `latIdx and lonIdx be identical`
+      }
+    }
+  }
+
   outputPath = outputPath || './output.csv';
   columnNames = columnNames.length ? columnNames : validColumnNames;
+
+  if (!isValidPath(inputPath)) {
+    return {
+      error: {
+        title: `Invalid file path: ${inputPath}`
+      }
+    }
+  }
 
   inputPath = untildify(inputPath)
   
