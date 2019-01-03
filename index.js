@@ -35,7 +35,7 @@ function writeFile (csv) {
   fs.writeFile(outputPath, csv, err => {
     if (err) {
       return console.log(
-        chalk.red.bold('Error writing file. Please contact support')
+        chalk.red.bold('Error writing file. Please contact support.')
       );
     }
 

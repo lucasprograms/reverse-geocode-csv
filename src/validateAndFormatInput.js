@@ -1,6 +1,4 @@
 const untildify = require('untildify');
-const isValidPath = require('is-valid-path');
-const path = require('path');
 
 function validateAndFormatInput(input) {
   const validColumnNames = [
@@ -52,15 +50,8 @@ function validateAndFormatInput(input) {
   outputPath = outputPath || './output.csv';
   columnNames = columnNames.length ? columnNames : validColumnNames;
 
-  if (!isValidPath(inputPath)) {
-    return {
-      error: {
-        title: `Invalid file path: ${inputPath}`
-      }
-    }
-  }
-
   inputPath = untildify(inputPath)
+  outputPath = untildify(outputPath)
   
   return { columnNames, inputPath, outputPath, latIdx, lonIdx };
 }
